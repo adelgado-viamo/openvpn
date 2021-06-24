@@ -1,0 +1,12 @@
+OpenVPN CLIENT LIST
+Updated,Thu Jun 24 21:15:57 2021
+Common Name,Real Address,Bytes Received,Bytes Sent,Connected Since
+dn.fri-et,172.21.0.6:44148,6199,7925,Thu Jun 24 21:14:12 2021
+client1,172.21.0.4:59943,15470,17200,Thu Jun 24 20:44:52 2021
+ROUTING TABLE
+Virtual Address,Common Name,Real Address,Last Ref
+10.8.0.100,client1,172.21.0.4:59943,Thu Jun 24 20:44:52 2021
+10.8.0.104,dn.fri-et,172.21.0.6:44148,Thu Jun 24 21:14:12 2021
+GLOBAL STATS
+Max bcast/mcast queue length,0
+END
