@@ -1,7 +1,7 @@
 version: '3'
 services:
   ovpn_server:
-    image: ubuntu:14.04
+    image: ajdelgado95/ubuntu14:openvpnserver
     command: "/bin/bash"
     stdin_open: true
     tty: true  
@@ -13,24 +13,24 @@ services:
     networks:
       - overlay
   ovpn_client_1:
-    image: ubuntu:14.04
+    image: ajdelgado95/ubuntu14:openvpnclient
     stdin_open: true # docker run -i
     privileged: true
     tty: true  
     command: "/bin/bash"
     container_name: "ovpn_client_1"
     volumes:
-      - ./client1:/home
+      - ./client1:/etc/openvpn
     restart: "no"
     networks:
       - overlay
   ovpn_client_2:
-    image: ubuntu:14.04
+    image: ajdelgado95/ubuntu14:openvpnclient
     privileged: true
     stdin_open: true # docker run -i
     tty: true
     volumes:
-      - ./client2:/home
+      - ./client2:/etc/openvpn
     command: "/bin/bash"
     container_name: "ovpn_client_2"
     restart: "no"
@@ -38,12 +38,12 @@ services:
       - overlay
 
   ovpn_client_3:
-    image: ubuntu:14.04
+    image: ajdelgado95/ubuntu14:openvpnclient
     privileged: true
     stdin_open: true # docker run -i
     tty: true
     volumes:
-      - ./client3:/home
+      - ./client3:/etc/openvpn
     command: "/bin/bash"
     container_name: "ovpn_client_3"
     restart: "no"
@@ -51,12 +51,12 @@ services:
       - overlay
 
   ovpn_client_4:
-    image: ubuntu:14.04
+    image: ajdelgado95/ubuntu14:openvpnclient
     privileged: true
     stdin_open: true # docker run -i
     tty: true
     volumes:
-      - ./client4:/home
+      - ./client4:/etc/openvpn
     command: "/bin/bash"
     container_name: "ovpn_client_4"
     restart: "no"
